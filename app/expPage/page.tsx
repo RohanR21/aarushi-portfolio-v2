@@ -1,5 +1,8 @@
-import Navbar from '../components/header';
-import { UCProjectBox } from '../components/UnclickableCard';
+"use client";
+import ActiveSlide from "../components/ActiveSlide";
+import Navbar from "../components/header";
+import { UCProjectBox } from "../components/UnclickableCard";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const ExpPage = () => {
   return (
@@ -9,13 +12,18 @@ const ExpPage = () => {
       </div>
       <section id="exp">
         <div className="flex items-center justify-center w-full">
-  <div className="bg-white p-3 rounded-lg">
-    <h1 className="text-4xl font-bold text-center bg-clip-text underline text-black bg-gradient-to-r from-[#ffcbdb] to-[#fbceb1]">
-      Recent Experience
-    </h1>
-  </div>
-</div>  
-<div className="w-screen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 place-items-center gap-6 pt-6 pb-10 px-6">
+          <div className="bg-white p-3 rounded-lg">
+            <h1 className="text-4xl font-bold text-center bg-clip-text underline text-black bg-gradient-to-r from-[#ffcbdb] to-[#fbceb1]">
+              Recent Experience
+            </h1>
+          </div>
+        </div>
+        <div>
+          <ActiveSlide />
+        </div>
+
+        {/*
+  <div className="w-screen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 place-items-center gap-6 pt-6 pb-10 px-6">
               <UCProjectBox
                 title="AI Development Intern"
                 org="Georgia Institute of Technology"
@@ -93,7 +101,8 @@ const ExpPage = () => {
               borderColor="#e0b594"
             />
           </div>
-        </section>
+          */}
+      </section>
     </div>
   );
 };
